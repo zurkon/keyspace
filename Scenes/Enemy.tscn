@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Early GameBoy.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/Enemies/enemy-small.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 6 )
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = -64.0
+margin_top = 8.0
+margin_right = 64.0
+margin_bottom = 24.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]type[/center]"
+text = "type"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[connection signal="tree_exiting" from="." to="." method="_on_Enemy_tree_exiting"]
