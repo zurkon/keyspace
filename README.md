@@ -17,5 +17,5 @@ This project was inspired by the typing game [`ZType`](https://zty.pe/)
 This project was made using:
 
 - [`Godot Engine`](https://github.com/godotengine/godot) - Multi-platform 2D and 3D game engine.
-- [`Spaceship Shooter Environment`](https://ansimuz.itch.io/spaceship-shooter-environment) - Space Shooter Pixel Art pack made by [`ansimus`](https://ansimuz.itch.io/).
-- [`Space Background`](https://ansimuz.itch.io/space-background) - Space Background Pixel Art made by [`ansimus`](https://ansimuz.itch.io/).
+- [`Spaceship Shooter Environment`](https://ansimuz.itch.io/spaceship-shooter-environment) - Space Shooter Pixel Art pack made by [`ansimuz`](https://ansimuz.itch.io/).
+- [`Space Background`](https://ansimuz.itch.io/space-background) - Space Background Pixel Art made by [`ansimuz`](https://ansimuz.itch.io/).
