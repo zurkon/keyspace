@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "WordList",
+"language": "GDScript",
+"path": "res://Scripts/word_list.gd"
+} ]
+_global_script_class_icons={
+"WordList": ""
+}
+
 [application]
 
 config/name="KeySpace"
@@ -22,6 +32,12 @@ window/size/test_width=320
 window/size/test_height=544
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[layer_names]
+
+2d_physics/layer_1="main"
+2d_physics/layer_2="bullet"
+2d_physics/layer_3="enemy"
 
 [physics]
 

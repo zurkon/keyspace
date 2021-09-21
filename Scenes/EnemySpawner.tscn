@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/enemy_spawner.gd" type="Script" id=1]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="LeftCorner" type="Position2D" parent="."]
+position = Vector2( -16, 32 )
+
+[node name="Left" type="Position2D" parent="."]
+position = Vector2( 24, -16 )
+
+[node name="Middle" type="Position2D" parent="."]
+position = Vector2( 80, -32 )
+
+[node name="Right" type="Position2D" parent="."]
+position = Vector2( 136, -16 )
+
+[node name="RightCorner" type="Position2D" parent="."]
+position = Vector2( 176, 32 )
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]

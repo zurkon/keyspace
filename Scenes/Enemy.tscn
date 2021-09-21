@@ -2,18 +2,19 @@
 
 [ext_resource path="res://Fonts/Early GameBoy.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/Enemies/enemy-small.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/enemy.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 8
 font_data = ExtResource( 1 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 6 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 7.0
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "Enemy",
 ]]
+collision_layer = 4
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]

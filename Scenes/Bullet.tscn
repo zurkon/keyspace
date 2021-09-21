@@ -1,13 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/Bullets/laser-bolts.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Bullet.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/bullet.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.5, 6 )
 
 [node name="Bullet" type="RigidBody2D"]
-collision_mask = 2
+collision_layer = 2
+collision_mask = 4
 gravity_scale = 0.0
 contacts_reported = 1
 contact_monitor = true
