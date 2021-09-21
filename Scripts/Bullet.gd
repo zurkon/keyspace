@@ -1,8 +1,14 @@
-extends RigidBody2D
+extends Area2D
 
 
 var _current_index := 0
 var _target_prompt := ""
+var _velocity := Vector2(1, 0)
+var _speed := 250.0
+
+
+func _physics_process(delta: float) -> void:
+	global_position += _velocity.rotated(rotation) * _speed * delta
 
 
 func set_current_index(value: int) -> void:
@@ -23,5 +29,6 @@ func get_target_prompt() -> String:
 
 func _on_Bullet_body_entered(body: Node2D) -> void:
 	if body.get_groups().has("Enemy"):
-		body.set_next_character(_current_index)
-		queue_free()
+		if body.get_prompt() == _target_prompt:
+			body.set_next_character(_current_index)
+			queue_free()

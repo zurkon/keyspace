@@ -14,4 +14,4 @@ func fire(target: KinematicBody2D, index_value: int, prompt: String) -> void:
 	bullet_instance.set_target_prompt(prompt)
 	get_parent().add_child(bullet_instance)
 	bullet_instance.look_at(target.get_global_position())
-	bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(bullet_instance.rotation))
+#	bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(bullet_instance.rotation))
