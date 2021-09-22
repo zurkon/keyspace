@@ -30,7 +30,8 @@ func spawn_new_enemy() -> void:
 	var enemy_instance = _enemy.instance()
 	enemy_instance.global_position = _positions[ randi() % 5 ].global_position
 	enemy_container.add_child(enemy_instance)
-	enemy_instance.get_node("Sprite").look_at( _player.get_global_position() )
+	enemy_instance.set_target(_player.global_position)
+	enemy_instance.get_node("Sprite").look_at( _player.global_position )
 	enemy_instance.get_node("Sprite").rotation_degrees -= 90
 	enemy_instance.set_prompt(new_word)
 

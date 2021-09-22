@@ -9,6 +9,7 @@ onready var prompt = $RichTextLabel
 
 
 var _origin_point := Vector2.ZERO
+var _target_point := Vector2.ZERO
 var _speed := 4
 var _prompt_text := ""
 
@@ -19,7 +20,11 @@ func _ready() -> void:
 
 
 func _physics_process(delta) -> void:
-	var _velocity = move_and_slide( (Vector2( 80, 248 ) - _origin_point) * _speed  * delta )
+	var _velocity = move_and_slide( (_target_point - _origin_point) * _speed  * delta )
+
+
+func set_target(target: Vector2) -> void:
+	_target_point = target
 
 
 func get_prompt() -> String:

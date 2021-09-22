@@ -9,19 +9,19 @@ __meta__ = {
 }
 
 [node name="LeftCorner" type="Position2D" parent="."]
-position = Vector2( -16, 8 )
+position = Vector2( -24, 16 )
 
 [node name="Left" type="Position2D" parent="."]
-position = Vector2( 24, -16 )
+position = Vector2( 48, -16 )
 
 [node name="Middle" type="Position2D" parent="."]
-position = Vector2( 80, -32 )
+position = Vector2( 128, -32 )
 
 [node name="Right" type="Position2D" parent="."]
-position = Vector2( 136, -16 )
+position = Vector2( 208, -16 )
 
 [node name="RightCorner" type="Position2D" parent="."]
-position = Vector2( 176, 8 )
+position = Vector2( 280, 16 )
 
 [node name="EnemyContainer" type="Node2D" parent="."]
 
