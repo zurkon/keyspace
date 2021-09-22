@@ -9,7 +9,7 @@ __meta__ = {
 }
 
 [node name="LeftCorner" type="Position2D" parent="."]
-position = Vector2( -16, 32 )
+position = Vector2( -16, 8 )
 
 [node name="Left" type="Position2D" parent="."]
 position = Vector2( 24, -16 )
@@ -21,7 +21,7 @@ position = Vector2( 80, -32 )
 position = Vector2( 136, -16 )
 
 [node name="RightCorner" type="Position2D" parent="."]
-position = Vector2( 176, 32 )
+position = Vector2( 176, 8 )
 
 [node name="EnemyContainer" type="Node2D" parent="."]
 

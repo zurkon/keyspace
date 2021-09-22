@@ -6,11 +6,11 @@ export var letter_color := Color("#b71c1c")
 
 
 onready var prompt = $RichTextLabel
-onready var prompt_text = prompt.text
 
 
-var _origin_point = Vector2.ZERO
+var _origin_point := Vector2.ZERO
 var _speed := 4
+var _prompt_text := ""
 
 
 func _ready() -> void:
@@ -19,22 +19,22 @@ func _ready() -> void:
 
 
 func _physics_process(delta) -> void:
-	var _velocity = move_and_slide( ( (Vector2( 80, 248 ) - _origin_point) * _speed)  * delta )
+	var _velocity = move_and_slide( (Vector2( 80, 248 ) - _origin_point) * _speed  * delta )
 
 
 func get_prompt() -> String:
-	return prompt_text
+	return _prompt_text
 
 
 func set_prompt(text: String) -> void:
-	prompt_text = text
+	_prompt_text = text
 	prompt.parse_bbcode("[center]" + text + "[/center]")
 
 
 func set_next_character(next_character_index: int) -> void:
-	var target_text = get_color_tag(target_color) + prompt_text.substr(next_character_index, prompt_text.length()) + get_end_color_tag()
+	var target_text = get_color_tag(target_color) + _prompt_text.substr(next_character_index, _prompt_text.length()) + get_end_color_tag()
 	prompt.parse_bbcode("[center]" + target_text + "[/center]")
-	if next_character_index == prompt_text.length():
+	if next_character_index == _prompt_text.length():
 		queue_free()
 
 

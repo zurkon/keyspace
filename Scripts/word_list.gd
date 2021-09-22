@@ -80,8 +80,3 @@ func get_random_word() -> String:
 	print(_available.size())
 	
 	return new_word
-#	print("Nova Palavra: %s" % new_word_index)
-#	print("Palavra selecionada: %s" % new_word)
-#	print("Filtrados: %d" % _filtered.size())
-#	print("Disponivel: %d" % _available.size())
-#	print("Lista: %d" % _words.size())

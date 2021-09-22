@@ -36,7 +36,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				current_letter_index += 1
 				player.fire(active_enemy, current_letter_index, current_prompt)
 				if current_letter_index == current_prompt.length():
-#					print("Reset!")
 					current_letter_index = -1
 					active_enemy = null
 					current_prompt = ""
