@@ -4,7 +4,7 @@
 
   <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/keyspace/gameplay.gif" />
 
-A Typing Space Shooter built with [`Godot`](https://godotengine.org/)
+A Dead Simple Typing Space Shooter built with [`Godot`](https://godotengine.org/)
 
 </div>
 
